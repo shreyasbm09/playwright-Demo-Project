@@ -15,7 +15,7 @@
   {
   //specifies the browser 
     browserName: 'chromium',
-    headless: false,
+    headless: true,
     screenshot: 'on',//on, off, only-on-failure
     trace: 'on',//on,off
     //trace: 'retain-on-failure',//off on reatin-on-failure
@@ -23,7 +23,9 @@
  
   },
 // Will get the html report after we run the test
-  reporter:'html', 
+  reporter:[['html'],['github']]
+  
+  , 
 
   }
 );
